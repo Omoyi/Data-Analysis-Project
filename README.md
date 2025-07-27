@@ -1,4 +1,4 @@
-# "Data Analysis Assignment" 
+# Uber Data Analysis Assignment Project 
 
 When forking or downloading remember to run from the first jupyter notebook, because it is the one that has the data frame loaded. Without doing that before running other notebook segments you might get an error on the dataFrame not being defined.
 
@@ -10,8 +10,13 @@ This project's goal was to perform an in-depth analysis of a large Uber trip dat
 
 ### **2. Tools Used**
 
-* **Python (Jupyter Notebook):** For initial data loading and preparation.
+* **Python (Jupyter Notebook, Matplotlib, Panda, and Seaborn libraries):** For initial data loading and preparation.
 * **Power BI:** For visualization, dashboard design, and interactive analysis.
+
+#### **3.1 Cloning Requirements**
+
+1. Make sure you set up your environment and have all the tools I listed above.
+2. After forking or cloning this project first run the code in the first jupyter notebook because it is the only one in which I loaded the data frame. If you run other notebook segments before running the first you might get an error about the dataFrame not being defined.
 
 ### **3. Data Analysis & Visualization**
 
@@ -25,9 +30,9 @@ I first focused on understanding temporal patterns in the data.
 
 * **Monthly & Seasonal Trends:** To understand seasonal patterns, I created a line chart. A key technical challenge was sorting the months correctly. I overcame this by creating a `month_sorting` column in Power Query and setting the `month` column to sort by it.
 
-    * *Challenge:* ![Screenshot showing sorting issue with months.](/visualization/weatherTrends.png)
+    * *Challenge:* ![Screenshot showing sorting issue with months.](/visualization/Sorting%20issue.png)
 
-    * *Solution:* ![Screenshot showing the month sorting column.](_insert_link_to_screenshot_of_month_sorting_column_here_)
+    * *Solution:* ![Screenshot showing the month sorting column.](/visualization/sort-columns.png)
 
     The final, sorted chart revealed a significant peak in ride volume during the **spring months (March to May)**. This led me to hypothesize that favorable weather during this season drives an increase in demand. I enhanced the visual by creating a `Season` column and adding it to the chart's legend.
 
@@ -35,29 +40,29 @@ I first focused on understanding temporal patterns in the data.
 
 #### **3.2 Fare & Trip Patterns**
 
-* **Fare vs. Distance:** I created a scatter plot to analyze the relationship between `fare_amount` and `distance_km`. I initially faced an issue where the chart showed only one dot because Power BI was aggregating the data. The solution was to set both fields to **"Do not summarize."** The final chart showed a strong, positive linear correlation, confirming that fare is directly tied to distance.
+* **Fare vs. Distance:** I created a scatter plot to analyze the relationship between `fare_amount` and `distance_km`. I initially faced an issue where the chart showed only one dot because Power BI was aggregating the data. The solution was switch to a line plot The final chart showed a strong, positive linear correlation, confirming that fare is directly tied to distance.
 
-    * *Challenge:* ![Screenshot of a scatter plot showing only one dot.](_insert_link_to_screenshot_of_single_dot_scatter_plot_here_)
+    * *Python:* ![Screenshot of generated scatter plot in Python.](/visualization/fare_distance.png)
 
-    * *Solution:* ![Screenshot of the scatter plot after changing to "Do not summarize".](_insert_link_to_screenshot_of_correct_scatter_plot_here_)
+    * *Solution:* ![Screenshot of the Line plot and changing to "Do not summarize".](/visualization/fare-distance.png)
 
-* **Fare vs. Passenger Count:** A bar chart comparing average fare by `passenger_count` produced a surprising result: the average fare for 2 passengers was unusually low. I investigated this by creating a second chart showing the count of trips per passenger. This revealed that the number of trips with 2 passengers was extremely low, making the average highly unreliable. This highlighted the importance of checking data quality and sample size.
+* **Fare vs. Passenger Count:** A bar chart comparing average fare by `passenger_count` produced a surprising result: the average fare for more than 2 passengers was unusually low and almost non-existent. I investigated this by creating a second chart showing the count of trips per passenger. This revealed that the number of trips with 2 passengers was extremely low, making the average highly unreliable. 
 
-    * *Challenge:* ![Screenshot of average fare by passenger count with an unusual result.](_insert_link_to_screenshot_of_complicated_bar_chart_here_)
+    * *Challenge:* ![Screenshot of average fare by passenger count with an unusual result.](/visualization/passenger-count.png)
 
-    * *Solution:* ![Screenshot of the count of trips by passenger count.](_insert_link_to_screenshot_of_trip_count_bar_chart_here_)
+    * *Solution:* ![Screenshot of the count of trips by passenger count.](/visualization/Fare-passenger.png)
 
 #### **3.3 Geographic Distribution**
 
 To understand where trips were happening, I used a map visualization. Initially, the map showed a single dot. The fix was the same as the scatter plot: I had to set the `latitude` and `longitude` fields to **"Don't summarize"**. The final map showed a dense cluster of rides in a specific area.
 
-* *Final Visual:* ![Screenshot of map showing ride paths in a specific area.](_insert_link_to_screenshot_of_final_map_here_)
+* *Final Visual:* ![Screenshot of map showing ride paths in a specific area.](/visualization/Map.png)
 
 ### **4. Key Findings**
 
 * Ride demand is highest on weekends and during the spring season.
 * Fare is strongly correlated with trip distance.
-* The business operates primarily within a concentrated geographic region.
+* The business operates primarily within North America.
 * The most profitable trips (long and expensive) occur during specific daily timeframes (9 AM - 10 PM).
 
 ### **5. Conclusion & Recommendations**
@@ -66,4 +71,4 @@ This analysis provides a clear picture of the company's operational patterns. To
 
 ### **6. Dashboard Interactivity**
 
-To make the dashboard fully interactive, I added slicers for `day_of_week`, `month`, and `hour`. This allows users to filter the data and gain their own insights. All charts were also formatted for a professional and consistent look.
+To make the dashboard fully interactive, I added slicers for `day_of_week` and `month`. This allows users to filter the data and gain their own insights. All charts were also formatted for a professional and consistent look.
