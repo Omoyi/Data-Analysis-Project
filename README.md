@@ -2,7 +2,7 @@
 
 ### **1. Project Overview**
 
-This project's goal was to perform an in-depth analysis of a large Uber trip dataset. I used a combination of Python for initial data preparation and Power BI for creating a comprehensive, interactive dashboard. The report below summarizes my methodology, key findings, and the solutions to the technical challenges I faced along the way.
+This project's goal was to perform a data analysis of a large Uber trip dataset. I used a combination of Python for initial data preparation and Power BI for creating a comprehensive, interactive dashboard. The report below summarizes my methodology, key findings, and the solutions to the technical challenges I faced along the way.
 
 ### **2. Tools Used**
 
