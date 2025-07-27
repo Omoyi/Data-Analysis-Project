@@ -21,7 +21,7 @@ This project's goal was to perform a data analysis of a large Uber trip dataset.
 
 I first focused on understanding temporal patterns in the data.
 
-* **Daily Ride Trends:** I created a bar chart to show ride volume by day of the week. This revealed a clear pattern: ride volume peaks on weekends, especially on **Fridays and Saturdays**, suggesting higher demand for social events.
+* **Daily Ride Trends:** I created a bar chart to show ride volume by day of the week. This revealed a clear pattern: ride volume peaks in the middle of the week, especially on **Thursday and Fridays**, suggesting higher demand for social events.
 
     * *Screenshot:* ![Daily ride volume by day of the week.](/visualization/Day-peakHour.png)
 
@@ -57,7 +57,7 @@ To understand where trips were happening, I used a map visualization. Initially,
 
 ### **4. Key Findings**
 
-* Ride demand is highest on weekends and during the spring season.
+* Ride demand is highest on Mid week days to weekends and during the spring season.
 * Fare is strongly correlated with trip distance.
 * The business operates primarily within North America.
 * The most profitable trips (long and expensive) occur during specific daily timeframes (9 AM - 10 PM).
