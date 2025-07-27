@@ -1,7 +1,3 @@
-# Uber Data Analysis Assignment Project 
-
-When forking or downloading remember to run from the first jupyter notebook, because it is the one that has the data frame loaded. Without doing that before running other notebook segments you might get an error on the dataFrame not being defined.
-
 # **Uber Trip Data Analysis: A Power BI & Python Project**
 
 ### **1. Project Overview**
@@ -16,6 +12,7 @@ This project's goal was to perform an in-depth analysis of a large Uber trip dat
 #### **3.1 Cloning Requirements**
 
 1. Make sure you set up your environment and have all the tools I listed above.
+2. Download the uber dataset from Kaggle: https://www.kaggle.com/datasets/yasserh/uber-fares-dataset
 2. After forking or cloning this project first run the code in the first jupyter notebook because it is the only one in which I loaded the data frame. If you run other notebook segments before running the first you might get an error about the dataFrame not being defined.
 
 ### **3. Data Analysis & Visualization**
